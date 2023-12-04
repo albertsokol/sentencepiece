@@ -21,9 +21,9 @@
 #ifdef _USE_EXTERNAL_ABSL
 // Naive workaround to define minloglevel on external absl package.
 // We want to define them in other cc file.
-#include "third_party/absl/flags/flag.h"
-#include "third_party/absl/flags/parse.h"
-ABSL_FLAG(int32, minloglevel, 0,
+#include "absl/flags/flag.h"
+#include "absl/flags/parse.h"
+ABSL_FLAG(int32, spm_minloglevel, 0,
           "Messages logged at a lower level than this don't actually.");
 #endif
 

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.!
 
-#include "third_party/absl/flags/flag.h"
+#include "absl/flags/flag.h"
 
 #include <algorithm>
 #include <iostream>
@@ -26,7 +26,7 @@
 
 ABSL_FLAG(bool, help, false, "show help");
 ABSL_FLAG(bool, version, false, "show version");
-ABSL_FLAG(int, minloglevel, 0,
+ABSL_FLAG(int, spm_minloglevel, 0,
           "Messages logged at a lower level than this don't actually get "
           "logged anywhere");
 

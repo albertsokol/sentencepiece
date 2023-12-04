@@ -22,12 +22,12 @@
 #include "sentencepiece_model.pb.h"
 #include "sentencepiece_trainer.h"
 #include "spec_parser.h"
-#include "third_party/absl/flags/flag.h"
-#include "third_party/absl/strings/numbers.h"
-#include "third_party/absl/strings/str_cat.h"
-#include "third_party/absl/strings/str_split.h"
-#include "third_party/absl/strings/string_view.h"
-#include "third_party/absl/strings/strip.h"
+#include "absl/flags/flag.h"
+#include "absl/strings/numbers.h"
+#include "absl/strings/str_cat.h"
+#include "absl/strings/str_split.h"
+#include "absl/strings/string_view.h"
+#include "absl/strings/strip.h"
 #include "trainer_factory.h"
 #include "util.h"
 
@@ -146,7 +146,7 @@ util::Status SentencePieceTrainer::MergeSpecsFromArgs(
       denormalizer_spec->set_remove_extra_whitespaces(false);
       denormalizer_spec->set_escape_whitespaces(false);
       continue;
-    } else if (key == "minloglevel") {
+    } else if (key == "spm_minloglevel") {
       int v = 0;
       CHECK_OR_RETURN(absl::SimpleAtoi(value, &v));
       logging::SetMinLogLevel(v);
